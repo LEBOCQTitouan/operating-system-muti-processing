@@ -3,4 +3,4 @@ project(operating_system_process_handling C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(operating_system_process_handling main.c)
+add_executable(operating_system_process_handling main.c iplot/iplot.c iplot/iplot.h iplot/iplot.c)
