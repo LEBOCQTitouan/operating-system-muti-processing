@@ -10,17 +10,17 @@
 
 ### Compilation
 
-#### Using cmake
+#### Using Make
 
 ```bash
-$ mkdir build
-$ cmake -S . -B build
+make
 ```
 
-#### Using make
+#### Using CMake
 
 ```bash
-$ make
+mkdir build
+cmake --build build
 ```
 
 ## Project description
