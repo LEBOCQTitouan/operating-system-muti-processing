@@ -1,0 +1,21 @@
+CC = gcc
+CFLAGS = -Wall -Werror
+
+SRCS = main.c iplot/iplot.c
+OBJS = $(SRCS:.c=.o)
+DEPS = $(SRCS:.c=.h)
+
+TARGET = operating-system-process-handling
+
+all: $(TARGET)
+
+$(TARGET): $(OBJS)
+	$(CC) $(CFLAGS) $(OBJS) -o $(TARGET)
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+clean:
+	rm -f $(OBJS)
+
+.PHONY: all clean
